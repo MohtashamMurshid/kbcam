@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "kbcam",
+    "slug": "kbcam",
+    "scheme": "kbcam",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0c0c0c"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.mohtasham.kbcam",
+      "infoPlist": {
+        "NSCameraUsageDescription": "kbcam needs the camera to take small photos.",
+        "NSPhotoLibraryAddUsageDescription": "kbcam saves a shot to your camera roll when you ask.",
+        "NSPhotoLibraryUsageDescription": "kbcam saves a shot to your camera roll when you ask."
+      }
+    },
+    "android": {
+      "package": "dev.mohtasham.kbcam",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0c0c0c"
+      },
+      "edgeToEdgeEnabled": false,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "kbcam needs the camera to take small photos.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "kbcam saves a shot to your camera roll when you ask.",
+          "savePhotosPermission": "kbcam saves a shot to your camera roll when you ask.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ]
+    ]
+  }
+}
